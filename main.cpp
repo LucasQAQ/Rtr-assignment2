@@ -4,8 +4,8 @@
 // STUDENT NAME: HU ZHANPENG
 // NUS User ID.: 20230418
 //
-// STUDENT NAME:
-// NUS User ID.:
+// STUDENT NAME: NING JUNTING
+// NUS User ID.: 20230318
 //
 // STUDENT NAME:
 // NUS User ID.:
@@ -321,7 +321,7 @@ static void MyDrawFunc(void)
 
         glm::mat4 modelMat0 = glm::mat4(1.0f);
         ///////////////////////////////////
-        glm::mat4 view = glm::mat4(glm::mat3(viewMat));
+        glm::mat4 view = glm::mat4(glm::mat3(viewMat)); // Create a view matrix without the translation part 
         glDepthMask(GL_FALSE);
         ///////////////////////////////////
 
@@ -337,7 +337,7 @@ static void MyDrawFunc(void)
 
         // Draw skybox.
         skyboxModel->render();
-        glDepthMask(GL_TRUE);
+        glDepthMask(GL_TRUE); // Enable depth buffer
     }
 
     //=======================================================================
