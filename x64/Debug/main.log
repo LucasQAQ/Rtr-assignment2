@@ -1,0 +1,155 @@
+﻿  drawable.cpp
+  glslprogram.cpp
+  glutils.cpp
+  trackball.cc
+  vbocube.cpp
+  vbomesh.cpp
+  vbomeshadj.cpp
+  vboplane.cpp
+  vbosphere.cpp
+  vbosphere2.cpp
+  vboteapot.cpp
+  vboteapotpatch.cpp
+  vbotorus.cpp
+  main.cpp
+  正在生成代码...
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewAttachShader，函数 "public: void __cdecl GLSLProgram::compileShader(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,enum GLSLShader::GLSLShaderType,char const *)" (?compileShader@GLSLProgram@@QEAAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@W4GLSLShaderType@GLSLShader@@PEBD@Z) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewBindAttribLocation，函数 "public: void __cdecl GLSLProgram::bindAttribLocation(unsigned int,char const *)" (?bindAttribLocation@GLSLProgram@@QEAAXIPEBD@Z) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewCompileShader，函数 "public: void __cdecl GLSLProgram::compileShader(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,enum GLSLShader::GLSLShaderType,char const *)" (?compileShader@GLSLProgram@@QEAAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@W4GLSLShaderType@GLSLShader@@PEBD@Z) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewCreateProgram，函数 "public: void __cdecl GLSLProgram::compileShader(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,enum GLSLShader::GLSLShaderType,char const *)" (?compileShader@GLSLProgram@@QEAAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@W4GLSLShaderType@GLSLShader@@PEBD@Z) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewCreateShader，函数 "public: void __cdecl GLSLProgram::compileShader(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,enum GLSLShader::GLSLShaderType,char const *)" (?compileShader@GLSLProgram@@QEAAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@W4GLSLShaderType@GLSLShader@@PEBD@Z) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewDeleteProgram，函数 "public: __cdecl GLSLProgram::~GLSLProgram(void)" (??1GLSLProgram@@QEAA@XZ) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewDeleteShader，函数 "public: __cdecl GLSLProgram::~GLSLProgram(void)" (??1GLSLProgram@@QEAA@XZ) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewGetAttachedShaders，函数 "public: __cdecl GLSLProgram::~GLSLProgram(void)" (??1GLSLProgram@@QEAA@XZ) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewGetProgramInfoLog，函数 "public: void __cdecl GLSLProgram::link(void)" (?link@GLSLProgram@@QEAAXXZ) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewGetProgramiv，函数 "public: __cdecl GLSLProgram::~GLSLProgram(void)" (??1GLSLProgram@@QEAA@XZ) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewGetShaderInfoLog，函数 "public: void __cdecl GLSLProgram::compileShader(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,enum GLSLShader::GLSLShaderType,char const *)" (?compileShader@GLSLProgram@@QEAAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@W4GLSLShaderType@GLSLShader@@PEBD@Z) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewGetShaderiv，函数 "public: void __cdecl GLSLProgram::compileShader(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,enum GLSLShader::GLSLShaderType,char const *)" (?compileShader@GLSLProgram@@QEAAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@W4GLSLShaderType@GLSLShader@@PEBD@Z) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewGetUniformLocation，函数 "private: int __cdecl GLSLProgram::getUniformLocation(char const *)" (?getUniformLocation@GLSLProgram@@AEAAHPEBD@Z) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewLinkProgram，函数 "public: void __cdecl GLSLProgram::link(void)" (?link@GLSLProgram@@QEAAXXZ) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewShaderSource，函数 "public: void __cdecl GLSLProgram::compileShader(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,enum GLSLShader::GLSLShaderType,char const *)" (?compileShader@GLSLProgram@@QEAAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@W4GLSLShaderType@GLSLShader@@PEBD@Z) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewUniform1f，函数 "public: void __cdecl GLSLProgram::setUniform(char const *,float)" (?setUniform@GLSLProgram@@QEAAXPEBDM@Z) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewUniform1i，函数 "public: void __cdecl GLSLProgram::setUniform(char const *,int)" (?setUniform@GLSLProgram@@QEAAXPEBDH@Z) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewUniform2f，函数 "public: void __cdecl GLSLProgram::setUniform(char const *,struct glm::vec<2,float,0> const &)" (?setUniform@GLSLProgram@@QEAAXPEBDAEBU?$vec@$01M$0A@@glm@@@Z) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewUniform3f，函数 "public: void __cdecl GLSLProgram::setUniform(char const *,float,float,float)" (?setUniform@GLSLProgram@@QEAAXPEBDMMM@Z) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewUniform4f，函数 "public: void __cdecl GLSLProgram::setUniform(char const *,struct glm::vec<4,float,0> const &)" (?setUniform@GLSLProgram@@QEAAXPEBDAEBU?$vec@$03M$0A@@glm@@@Z) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewUniformMatrix3fv，函数 "public: void __cdecl GLSLProgram::setUniform(char const *,struct glm::mat<3,3,float,0> const &)" (?setUniform@GLSLProgram@@QEAAXPEBDAEBU?$mat@$02$02M$0A@@glm@@@Z) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewUniformMatrix4fv，函数 "public: void __cdecl GLSLProgram::setUniform(char const *,struct glm::mat<4,4,float,0> const &)" (?setUniform@GLSLProgram@@QEAAXPEBDAEBU?$mat@$03$03M$0A@@glm@@@Z) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewUseProgram，函数 "public: void __cdecl GLSLProgram::use(void)" (?use@GLSLProgram@@QEAAXXZ) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewValidateProgram，函数 "public: void __cdecl GLSLProgram::validate(void)" (?validate@GLSLProgram@@QEAAXXZ) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewBindFragDataLocation，函数 "public: void __cdecl GLSLProgram::bindFragDataLocation(unsigned int,char const *)" (?bindFragDataLocation@GLSLProgram@@QEAAXIPEBD@Z) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewUniform1ui，函数 "public: void __cdecl GLSLProgram::setUniform(char const *,unsigned int)" (?setUniform@GLSLProgram@@QEAAXPEBDI@Z) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewGetProgramInterfaceiv，函数 "public: void __cdecl GLSLProgram::printActiveAttribs(void)" (?printActiveAttribs@GLSLProgram@@QEAAXXZ) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewGetProgramResourceName，函数 "public: void __cdecl GLSLProgram::printActiveAttribs(void)" (?printActiveAttribs@GLSLProgram@@QEAAXXZ) 中引用了该符号
+glslprogram.obj : error LNK2019: 无法解析的外部符号 __imp___glewGetProgramResourceiv，函数 "public: void __cdecl GLSLProgram::printActiveAttribs(void)" (?printActiveAttribs@GLSLProgram@@QEAAXXZ) 中引用了该符号
+glutils.obj : error LNK2019: 无法解析的外部符号 __imp_glGetError，函数 "int __cdecl GLUtils::checkForOpenGLError(char const *,int)" (?checkForOpenGLError@GLUtils@@YAHPEBDH@Z) 中引用了该符号
+glutils.obj : error LNK2019: 无法解析的外部符号 __imp_glGetIntegerv，函数 "void __cdecl GLUtils::dumpGLInfo(bool)" (?dumpGLInfo@GLUtils@@YAX_N@Z) 中引用了该符号
+glutils.obj : error LNK2019: 无法解析的外部符号 __imp_glGetString，函数 "void __cdecl GLUtils::dumpGLInfo(bool)" (?dumpGLInfo@GLUtils@@YAX_N@Z) 中引用了该符号
+main.obj : error LNK2001: 无法解析的外部符号 __imp_glGetString
+glutils.obj : error LNK2019: 无法解析的外部符号 __imp___glewGetStringi，函数 "void __cdecl GLUtils::dumpGLInfo(bool)" (?dumpGLInfo@GLUtils@@YAX_N@Z) 中引用了该符号
+vbosphere.obj : error LNK2001: 无法解析的外部符号 __imp_glDrawElements
+vbosphere2.obj : error LNK2001: 无法解析的外部符号 __imp_glDrawElements
+vboteapot.obj : error LNK2001: 无法解析的外部符号 __imp_glDrawElements
+vbotorus.obj : error LNK2001: 无法解析的外部符号 __imp_glDrawElements
+vbocube.obj : error LNK2001: 无法解析的外部符号 __imp_glDrawElements
+vbomesh.obj : error LNK2001: 无法解析的外部符号 __imp_glDrawElements
+vbomeshadj.obj : error LNK2001: 无法解析的外部符号 __imp_glDrawElements
+vboplane.obj : error LNK2001: 无法解析的外部符号 __imp_glDrawElements
+vbotorus.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindBuffer
+vbosphere.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindBuffer
+vbosphere2.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindBuffer
+vboteapot.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindBuffer
+vboteapotpatch.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindBuffer
+vbocube.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindBuffer
+vbomesh.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindBuffer
+vbomeshadj.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindBuffer
+vboplane.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindBuffer
+vbotorus.obj : error LNK2001: 无法解析的外部符号 __imp___glewBufferData
+vbosphere.obj : error LNK2001: 无法解析的外部符号 __imp___glewBufferData
+vbosphere2.obj : error LNK2001: 无法解析的外部符号 __imp___glewBufferData
+vboteapot.obj : error LNK2001: 无法解析的外部符号 __imp___glewBufferData
+vboteapotpatch.obj : error LNK2001: 无法解析的外部符号 __imp___glewBufferData
+vbocube.obj : error LNK2001: 无法解析的外部符号 __imp___glewBufferData
+vbomesh.obj : error LNK2001: 无法解析的外部符号 __imp___glewBufferData
+vbomeshadj.obj : error LNK2001: 无法解析的外部符号 __imp___glewBufferData
+vboplane.obj : error LNK2001: 无法解析的外部符号 __imp___glewBufferData
+vbotorus.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenBuffers
+vbosphere.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenBuffers
+vbosphere2.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenBuffers
+vboteapot.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenBuffers
+vboteapotpatch.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenBuffers
+vbocube.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenBuffers
+vbomesh.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenBuffers
+vbomeshadj.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenBuffers
+vboplane.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenBuffers
+vbotorus.obj : error LNK2001: 无法解析的外部符号 __imp___glewEnableVertexAttribArray
+vbosphere.obj : error LNK2001: 无法解析的外部符号 __imp___glewEnableVertexAttribArray
+vbosphere2.obj : error LNK2001: 无法解析的外部符号 __imp___glewEnableVertexAttribArray
+vboteapot.obj : error LNK2001: 无法解析的外部符号 __imp___glewEnableVertexAttribArray
+vboteapotpatch.obj : error LNK2001: 无法解析的外部符号 __imp___glewEnableVertexAttribArray
+vbocube.obj : error LNK2001: 无法解析的外部符号 __imp___glewEnableVertexAttribArray
+vbomesh.obj : error LNK2001: 无法解析的外部符号 __imp___glewEnableVertexAttribArray
+vbomeshadj.obj : error LNK2001: 无法解析的外部符号 __imp___glewEnableVertexAttribArray
+vboplane.obj : error LNK2001: 无法解析的外部符号 __imp___glewEnableVertexAttribArray
+vbotorus.obj : error LNK2001: 无法解析的外部符号 __imp___glewVertexAttribPointer
+vbosphere.obj : error LNK2001: 无法解析的外部符号 __imp___glewVertexAttribPointer
+vbosphere2.obj : error LNK2001: 无法解析的外部符号 __imp___glewVertexAttribPointer
+vboteapot.obj : error LNK2001: 无法解析的外部符号 __imp___glewVertexAttribPointer
+vboteapotpatch.obj : error LNK2001: 无法解析的外部符号 __imp___glewVertexAttribPointer
+vbocube.obj : error LNK2001: 无法解析的外部符号 __imp___glewVertexAttribPointer
+vbomesh.obj : error LNK2001: 无法解析的外部符号 __imp___glewVertexAttribPointer
+vbomeshadj.obj : error LNK2001: 无法解析的外部符号 __imp___glewVertexAttribPointer
+vboplane.obj : error LNK2001: 无法解析的外部符号 __imp___glewVertexAttribPointer
+vbotorus.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindVertexArray
+vbosphere.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindVertexArray
+vbosphere2.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindVertexArray
+vboteapot.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindVertexArray
+vboteapotpatch.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindVertexArray
+vbocube.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindVertexArray
+vbomesh.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindVertexArray
+vbomeshadj.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindVertexArray
+vboplane.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindVertexArray
+vbotorus.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenVertexArrays
+vbosphere.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenVertexArrays
+vbosphere2.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenVertexArrays
+vboteapot.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenVertexArrays
+vboteapotpatch.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenVertexArrays
+vbocube.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenVertexArrays
+vbomesh.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenVertexArrays
+vbomeshadj.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenVertexArrays
+vboplane.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenVertexArrays
+vboteapotpatch.obj : error LNK2019: 无法解析的外部符号 __imp_glDrawArrays，函数 "public: virtual void __cdecl VBOTeapotPatch::render(void)const " (?render@VBOTeapotPatch@@UEBAXXZ) 中引用了该符号
+vboteapotpatch.obj : error LNK2019: 无法解析的外部符号 __imp___glewPatchParameteri，函数 "public: virtual void __cdecl VBOTeapotPatch::render(void)const " (?render@VBOTeapotPatch@@UEBAXXZ) 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 __imp_glBindTexture，函数 "void __cdecl SetupEnvMap(void)" (?SetupEnvMap@@YAXXZ) 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 __imp_glClear，函数 "void __cdecl MyDrawFunc(void)" (?MyDrawFunc@@YAXXZ) 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 __imp_glClearColor，函数 "void __cdecl MyInit(void)" (?MyInit@@YAXXZ) 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 __imp_glDepthMask，函数 "void __cdecl MyDrawFunc(void)" (?MyDrawFunc@@YAXXZ) 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 __imp_glEnable，函数 "void __cdecl MyInit(void)" (?MyInit@@YAXXZ) 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 __imp_glGenTextures，函数 "void __cdecl SetupEnvMap(void)" (?SetupEnvMap@@YAXXZ) 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 __imp_glPolygonMode，函数 "void __cdecl MyDrawFunc(void)" (?MyDrawFunc@@YAXXZ) 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 __imp_glTexImage2D，函数 "void __cdecl SetupEnvMap(void)" (?SetupEnvMap@@YAXXZ) 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 __imp_glTexParameteri，函数 "void __cdecl SetupEnvMap(void)" (?SetupEnvMap@@YAXXZ) 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 __imp_glViewport，函数 "void __cdecl MyReshapeFunc(struct GLFWwindow *,int,int)" (?MyReshapeFunc@@YAXPEAUGLFWwindow@@HH@Z) 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 __imp_glewInit，函数 main 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 __imp_glewGetErrorString，函数 main 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 __imp_glewGetString，函数 main 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 glfwInit，函数 main 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 glfwTerminate，函数 main 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 glfwSetErrorCallback，函数 main 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 glfwWindowHint，函数 main 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 glfwCreateWindow，函数 main 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 glfwDestroyWindow，函数 main 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 glfwWindowShouldClose，函数 main 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 glfwSetWindowShouldClose，函数 "void __cdecl MyKeyboardFunc(struct GLFWwindow *,int,int,int,int)" (?MyKeyboardFunc@@YAXPEAUGLFWwindow@@HHHH@Z) 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 glfwGetFramebufferSize，函数 main 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 glfwSetFramebufferSizeCallback，函数 main 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 glfwWaitEvents，函数 main 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 glfwSetKeyCallback，函数 main 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 glfwSetMouseButtonCallback，函数 main 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 glfwSetCursorPosCallback，函数 main 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 glfwMakeContextCurrent，函数 main 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 glfwSwapBuffers，函数 main 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 glfwSwapInterval，函数 main 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 __imp___glewActiveTexture，函数 "void __cdecl SetupEnvMap(void)" (?SetupEnvMap@@YAXXZ) 中引用了该符号
+main.obj : error LNK2019: 无法解析的外部符号 __imp___glewGenerateMipmap，函数 "void __cdecl SetupEnvMap(void)" (?SetupEnvMap@@YAXXZ) 中引用了该符号
+C:\Code\sws3005_2023_assign2_todo_(win-vs2017)\assign2_todo_(win-vs2017)\x64\Debug\main.exe : fatal error LNK1120: 75 个无法解析的外部命令

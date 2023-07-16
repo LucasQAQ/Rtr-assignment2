@@ -1,0 +1,16 @@
+﻿  drawable.cpp
+  glslprogram.cpp
+  glutils.cpp
+  trackball.cc
+  vbocube.cpp
+  vbomesh.cpp
+  vbomeshadj.cpp
+  vboplane.cpp
+  vbosphere.cpp
+  vbosphere2.cpp
+  vboteapot.cpp
+  vboteapotpatch.cpp
+  vbotorus.cpp
+  main.cpp
+  正在生成代码...
+  main.vcxproj -> C:\Code\sws3005_2023_assign2_todo_(win-vs2017)\assign2_todo_(win-vs2017)\Debug\main.exe
