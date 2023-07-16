@@ -357,6 +357,7 @@ static void MyDrawFunc(void)
         glm::mat4 modelViewProjMat1 = projMat * modelViewMat1;
         glm::mat3 normalMat1 = glm::transpose(glm::inverse(glm::mat3(modelViewMat1)));
 
+        // Compute the inverse of ModelViewProject Matrix to transform reflection vector to world space
         glm::mat4 invModelViewProjMat1 = glm::inverse(modelViewMat1);
         shaderProg.setUniform("ViewMatrix", invModelViewProjMat1);
         shaderProg.setUniform("ModelViewMatrix", modelViewMat1);
@@ -394,6 +395,7 @@ static void MyDrawFunc(void)
         glm::mat4 modelViewMat2 = viewMat * modelMat2;
         glm::mat4 modelViewProjMat2 = projMat * modelViewMat2;
         glm::mat3 normalMat2 = glm::transpose(glm::inverse(glm::mat3(modelViewMat2)));
+        // Compute the inverse of ModelViewProject Matrix to transform reflection vector to world space
         glm::mat4 invModelViewProjMat2 = glm::inverse(modelViewMat2);
         shaderProg.setUniform("ViewMatrix", invModelViewProjMat2);
         shaderProg.setUniform("ModelViewMatrix", modelViewMat2);

@@ -174,10 +174,16 @@ void drawBrickCube()
         ///////////////////////////////////
         vec3 nTangent;
         vec3 nBinormal;
+        // Construct eye-space Tangent and Binormal vectors
         compute_tangent_vectors(necNormal, viewVec, v2fTexCoord.xy, nTangent, nBinormal);
+
+        // Read and decode tangent-space perturbation vector from normal map.
         vec3 tanPerturbedNormal = vec3(texture(BrickNormalMap, v2fTexCoord.xy).xy, 1.0);
+
+        // Transform perturbation vector to eye space.
         vec3 ecPerturbedNormal = normalize(tanPerturbedNormal.x * nTangent + tanPerturbedNormal.y * nBinormal + tanPerturbedNormal.z * necNormal);
         
+        // Use eye-space perturbation vector as normal vector in lighting computation using Phong Reflection Model
         vec3 reflectVec = normalize(reflect(-lightVec, ecPerturbedNormal));
         float N_dot_L = max(0.0, dot(ecPerturbedNormal, lightVec));
         float R_dot_V = max(0.0, dot(reflectVec, viewVec));
@@ -241,7 +247,9 @@ void drawWoodenCube()
         compute_tangent_vectors(necNormal, viewVec, v2fTexCoord.xy, nTangent, nBinormal);
         vec3 tanPerturbedNormal = vec3(fract(MirrorTileDensity * v2fTexCoord.xy) - 0.5, DeltaNormal_Z_Scale);
         float sqrDist = tanPerturbedNormal.x * tanPerturbedNormal.x + tanPerturbedNormal.y * tanPerturbedNormal.y;
+        // Check whether the fragment is in wood region
         if(sqrDist >= MirrorRadius*MirrorRadius){
+            // Perform Phong lighting computation using the wood texture color as the ambient and diffuse material.
             vec3 reflectVec = normalize(reflect(-lightVec, ecNormal));
             float N_dot_L = max(0.0, dot(ecNormal, lightVec));
             float R_dot_V = max(0.0, dot(reflectVec, viewVec));
@@ -258,10 +266,14 @@ void drawWoodenCube()
             FragColor = vec4(result, 1.0); 
         }
         else{
+            // Transform perturbation vector to eye space.
             vec3 ecPerturbedNormal = normalize(tanPerturbedNormal.x * nTangent + tanPerturbedNormal.y * nBinormal + tanPerturbedNormal.z * necNormal);
            
+            // Reflect the view vector about the eye-space perturbation vector.
             vec3 ecreflectView = normalize(reflect(viewVec, ecPerturbedNormal));
             vec3 wcreflectView = normalize(vec3(ViewMatrix * vec4(ecreflectView,0)));
+
+            // Use world-space reflection vector to access environment cubemap.
             vec3 diff = texture(EnvMap, wcreflectView).rgb;
             
             vec3 reflectVec = normalize(reflect(-lightVec, ecPerturbedNormal));
