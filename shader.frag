@@ -176,12 +176,14 @@ void drawBrickCube()
         vec3 nBinormal;
         // Construct eye-space Tangent and Binormal vectors
         compute_tangent_vectors(necNormal, viewVec, v2fTexCoord.xy, nTangent, nBinormal);
-
+        // Make sure N, T, B form an orthogonal system
+        nTangent = normalize(cross(necNormal, nBinormal));
+        nBinormal = normalize(cross(necNormal, nTangent));
         // Read and decode tangent-space perturbation vector from normal map.
-        vec3 tanPerturbedNormal = vec3(texture(BrickNormalMap, v2fTexCoord.xy).xy, 1.0);
+        vec3 tanPerturbedNormal = normalize(vec3(texture(BrickNormalMap, v2fTexCoord.xy).rgb * 2.0 - 1.0));
 
         // Transform perturbation vector to eye space.
-        vec3 ecPerturbedNormal = normalize(tanPerturbedNormal.x * nTangent + tanPerturbedNormal.y * nBinormal + tanPerturbedNormal.z * necNormal);
+        vec3 ecPerturbedNormal = normalize(tanPerturbedNormal.x * nTangent + tanPerturbedNormal.y * nBinormal + DeltaNormal_Z_Scale * tanPerturbedNormal.z * necNormal);
         
         // Use eye-space perturbation vector as normal vector in lighting computation using Phong Reflection Model
         vec3 reflectVec = normalize(reflect(-lightVec, ecPerturbedNormal));
@@ -195,7 +197,6 @@ void drawBrickCube()
         float spec = (R_dot_V == 0.0) ? 0.0 : pow(R_dot_V, BrickShininess);
         vec3 specular = LightSpecular.rgb * spec * BrickSpecularMaterial;
         
-
         vec3 result = ambient + diffuse + specular;
         ///////////////////////////////////
 
@@ -245,10 +246,14 @@ void drawWoodenCube()
         vec3 nTangent;
         vec3 nBinormal;
         compute_tangent_vectors(necNormal, viewVec, v2fTexCoord.xy, nTangent, nBinormal);
-        vec3 tanPerturbedNormal = vec3(fract(MirrorTileDensity * v2fTexCoord.xy) - 0.5, DeltaNormal_Z_Scale);
-        float sqrDist = tanPerturbedNormal.x * tanPerturbedNormal.x + tanPerturbedNormal.y * tanPerturbedNormal.y;
+        // Make sure N, T, B form an orthogonal system
+        nTangent = normalize(cross(necNormal, nBinormal));
+        nBinormal = normalize(cross(necNormal, nTangent));
+
+        vec2 p = fract(MirrorTileDensity * v2fTexCoord.xy) - 0.5;
+        float Dist = sqrt(p.x * p.x + p.y * p.y);
         // Check whether the fragment is in wood region
-        if(sqrDist >= MirrorRadius*MirrorRadius){
+        if(Dist >= MirrorRadius){
             // Perform Phong lighting computation using the wood texture color as the ambient and diffuse material.
             vec3 reflectVec = normalize(reflect(-lightVec, ecNormal));
             float N_dot_L = max(0.0, dot(ecNormal, lightVec));
@@ -266,12 +271,17 @@ void drawWoodenCube()
             FragColor = vec4(result, 1.0); 
         }
         else{
+        
+            vec3 tanPerturbedNormal = normalize(vec3(p.x, p.y, sqrt(MirrorRadius * MirrorRadius - p.x * p.x - p.y * p.y)));
             // Transform perturbation vector to eye space.
             vec3 ecPerturbedNormal = normalize(tanPerturbedNormal.x * nTangent + tanPerturbedNormal.y * nBinormal + tanPerturbedNormal.z * necNormal);
            
             // Reflect the view vector about the eye-space perturbation vector.
-            vec3 ecreflectView = normalize(reflect(viewVec, ecPerturbedNormal));
-            vec3 wcreflectView = normalize(vec3(ViewMatrix * vec4(ecreflectView,0)));
+            vec3 ecreflectView = normalize(reflect(-viewVec, ecPerturbedNormal));
+
+            // Transform reflection vector to World Space.
+            mat4 invM = inverse(ViewMatrix);
+            vec3 wcreflectView = normalize(vec3(invM * vec4(ecreflectView,0)));
 
             // Use world-space reflection vector to access environment cubemap.
             vec3 diff = texture(EnvMap, wcreflectView).rgb;
