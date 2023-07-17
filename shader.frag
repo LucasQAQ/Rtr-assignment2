@@ -5,10 +5,10 @@
 // NUS User ID.: t0930152
 //
 // STUDENT NAME: NING JUNTING
-// NUS User ID.: 20230318
+// NUS User ID.: t0930085
 //
-// STUDENT NAME: 
-// NUS User ID.: 
+// STUDENT NAME: LUO TANGWEN
+// NUS User ID.: t0930258
 //
 // COMMENTS TO GRADER: 
 //
@@ -276,20 +276,7 @@ void drawWoodenCube()
             // Use world-space reflection vector to access environment cubemap.
             vec3 diff = texture(EnvMap, wcreflectView).rgb;
             
-            vec3 reflectVec = normalize(reflect(-lightVec, ecPerturbedNormal));
-            float N_dot_L = max(0.0, dot(ecPerturbedNormal, lightVec));
-            float R_dot_V = max(0.0, dot(reflectVec, viewVec));
-            
-            vec3 ambient = LightAmbient.rgb * diff;
-
-            vec3 diffuse = LightDiffuse.rgb * diff * N_dot_L;
-            
-            float spec = (R_dot_V == 0.0) ? 0.0 : pow(R_dot_V, WoodShininess);
-            vec3 specular = LightSpecular.rgb * spec * WoodSpecularMaterial;
-            
-
-            vec3 result = ambient + diffuse + specular;
-            FragColor = vec4(result, 1.0); 
+            FragColor = vec4(diff, 1.0); 
             
         ///////////////////////////////////
         }
